@@ -7,6 +7,7 @@ namespace WebOrderSystem.Services
     public interface ICommentService
     {
         List<int> GetTopPostIdsWithMostComments();
+        List<CommentsInfo> GetComments();
     }
 
     public class CommentService : ICommentService
@@ -30,6 +31,35 @@ namespace WebOrderSystem.Services
                         .ToList();
 
                     return topPosts;
+                }
+                return [];
+            }
+            else
+            {
+                throw new Exception($"Error calling the API: {response.ErrorMessage}");
+            }
+        }
+
+        public List<CommentsInfo> GetComments()
+        {
+            var client = new RestClient("https://jsonplaceholder.typicode.com");
+            var request = new RestRequest("comments", Method.Get);
+            var response = client.Execute(request);
+
+            if (response.IsSuccessful)
+            {
+                List<CommentsInfo>? comments = (response.Content != null) ? JsonConvert.DeserializeObject<List<CommentsInfo>>(response.Content) : [];
+                
+                if (comments != null)
+                {
+                    var postCommentsCount = comments
+                        .GroupBy(c => c.PostId)
+                        .Select(g => new CommentsInfo { PostId = g.Key, CommentsCount = g.Count() })
+                        .OrderByDescending(pc => pc.CommentsCount)
+                        .Take(3)
+                        .ToList();
+
+                    return postCommentsCount;
                 }
                 return [];
             }

@@ -21,5 +21,11 @@ namespace WebOrderSystem.Controllers
             return Ok(topPostIds);
         }
 
+        [HttpGet("TopPostWithMostComments")]
+        public IActionResult GetTopPostsWithMostComments()
+        {
+            var comments = _postService.GetComments();
+            return Ok(comments);
+        }
     }
 }

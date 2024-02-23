@@ -73,8 +73,6 @@ Explicar estos aspectos proporciona una guía clara sobre cómo se estructuran l
 1. Crea un endpoint que devuelva los tres posts con más comentarios, obtenidos de la API mencionada en el ejercicio anterior.
 2. La respuesta debe incluir información sobre el ID del post y la cantidad de comentarios.
 
-Recuerda incluir en tus resultados el código fuente, la estructura del repositorio de Git, y cualquier detalle adicional que consideres necesario para evaluar la implementación de los ejercicios. ¡Buena suerte!
-
 
 ## Arquitectura de carpetas
 ![image](https://github.com/JaviPaez/WebOrderSystem/assets/69802155/c1a74bd3-d5af-4380-85fb-bf061240e036)
@@ -88,6 +86,8 @@ Recuerda incluir en tus resultados el código fuente, la estructura del reposito
 
 
 ```cd WebOrderSystem/WebOrderSystem```
+
+
 ```dotnet restore```
 
 - Configura la Base de Datos: Asegúrate de tener una instancia de SQL Server disponible. Puedes utilizar una instancia local. Si necesitas ayuda para configurar una instancia de SQL Server, consulta la documentación oficial. Modifica el archivo appsettings.json con tu cadena de conexión ("DefaultConnection").

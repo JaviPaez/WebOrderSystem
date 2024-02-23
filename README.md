@@ -81,12 +81,12 @@ Recuerda incluir en tus resultados el código fuente, la estructura del reposito
 
 ## Instrucciones de Instalación y Ejecución
 - Clona el Repositorio: Abre una terminal y ejecuta el siguiente comando para clonar el repositorio de GitHub:
-'git clone https://github.com/JaviPaez/WebOrderSystem'
+```git clone https://github.com/JaviPaez/WebOrderSystem```
 
 - Instala Dependencias: Navega hasta el directorio del proyecto y ejecuta el siguiente comando para instalar las dependencias del proyecto:
 
-'cd WebOrderSystem/WebOrderSystem
-dotnet restore'
+```cd WebOrderSystem/WebOrderSystem
+dotnet restore```
 
 - Configura la Base de Datos: Asegúrate de tener una instancia de SQL Server disponible. Puedes utilizar una instancia local. Si necesitas ayuda para configurar una instancia de SQL Server, consulta la documentación oficial. Modifica el archivo appsettings.json con tu cadena de conexión ("DefaultConnection").
 

@@ -77,30 +77,7 @@ Recuerda incluir en tus resultados el código fuente, la estructura del reposito
 
 
 ## Arquitectura de carpetas
-WebOrderSystemSolution/           # Solución de Visual Studio
-├── Database/                     # Carpeta que contiene scripts SQL
-│   └── addModelsTables.sql       # Script SQL para la creación de la base de datos
-├── WebOrderSystem/               # Proyecto principal de ASP.NET Core
-│   ├── Context/                  # Contexto de base de datos de la aplicación
-│   │   ├── ApplicationDbContext.cs   # Clase de contexto de base de datos de la aplicación
-│   │   └── DbSeed.cs                 # Clase para sembrar datos en la base de datos
-│   ├── Controllers/              # Controladores de ASP.NET Core
-│   │   ├── CommentsController.cs    # Controlador para manejar comentarios
-│   │   └── OrdersController.cs      # Controlador para manejar pedidos
-│   ├── Migrations/               # Migraciones de base de datos generadas por Entity Framework Core
-│   │   ├── ...                        # Archivos de migración
-│   ├── Models/                   # Modelos de datos de la aplicación
-│   │   ├── Comment.cs               # Modelo para representar un comentario
-│   │   ├── CommentsInfo.cs          # Modelo para representar un info de id de post y cantidad de comentario
-│   │   ├── Member.cs                # Modelo para representar un miembro
-│   │   ├── Order.cs                 # Modelo para representar un pedido
-│   │   └── Product.cs               # Modelo para representar un producto
-│   ├── Services/                 # Servicios de la aplicación
-│   │   └── CommentService.cs       # Servicio para manejar comentarios y llamadas a la API externa
-│   ├── appsettings.json          # Configuración de la aplicación
-│   ├── Program.cs                # Punto de entrada de la aplicación ASP.NET Core
-│   └── README.md                 # Documentación del proyecto
-└── WebOrderSystem.sln            # Archivo de solución de Visual Studio
+![image](https://github.com/JaviPaez/WebOrderSystem/assets/69802155/c1a74bd3-d5af-4380-85fb-bf061240e036)
 
 ## Instrucciones de Instalación y Ejecución
 - Clona el Repositorio: Abre una terminal y ejecuta el siguiente comando para clonar el repositorio de GitHub:
@@ -123,10 +100,13 @@ dotnet restore'
 ## Endpoints
 
 - /api/Orders/LastOrdersByMember
+
 Devuelve el último pedido para cada miembro. Incluye el nombre del miembro, el nombre del producto y el nombre del pedido.
 
 - /api/Comments/TopPostIdsWithMostComments
+  
 Devuelve los tres ID de posts con más comentarios de una API externa [https://jsonplaceholder.typicode.com/comments]
 
 - /api/Comments/TopPostWithMostComments
+
 Devuelve los tres posts con más comentarios, obtenidos de la API mencionada en el ejercicio anterior. Incluye información sobre el ID del post y la cantidad de comentarios.
